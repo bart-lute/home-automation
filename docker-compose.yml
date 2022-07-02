@@ -22,5 +22,13 @@ services:
       - /etc/localtime:/etc/localtime:ro
     restart: always
 
+  esphome:
+    container_name: esphome
+    image: "esphome/esphome"
+    ports:
+      - "6052:6052"
+    volumes:
+      - ./volumes/esphome/config:/config
+
 
 
